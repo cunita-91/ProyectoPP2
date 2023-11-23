@@ -1,4 +1,3 @@
 ALTER TABLE turnoscardio.turnos_asig
-ADD CONSTRAINT FK FOREIGN KEY (ID_prof)
-REFERENCES profesionales (ID_prof);
-
+ADD CONSTRAINT claveForanea FOREIGN KEY (Id_ptes)
+REFERENCES pacientes (ID_ptes);
