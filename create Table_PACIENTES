@@ -1,0 +1,9 @@
+CREATE TABLE TurnosCardio.Pacientes(
+    ID_pte INT AUTO INCREMENT NOT NULL PRIMARY KEY,
+    Apellido_pte VARCHAR(60) NOT NULL,
+    Nombre_pte VARCHAR (50) NOT NULL,
+    DNI_pte VARCHAR (12) NOT NULL,
+    OS_pte VARCHAR (30) NOT NULL,
+    Tel_pte VARCHAR (20) NOT NULL,
+    Fecha_Nac DATE NOT NULL,
+    Cardiopata BOOLEAN NOT NULL ) ENGINE=InnoDB;
