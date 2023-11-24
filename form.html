@@ -1,41 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TURNOS</title>
+    <title>Solicitud de turnos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
-    <div class= "form">
-		<form action ="#" method= "POST">
-			<P>APELLIDO</P>
-			<input type="text" name="Apellido_pte" placeholder="Apellido" required>
-			<br>
 
-			<P>NOMBRE</P>
-			<input type="text" name="Nombre_pte" placeholder="Nombre" required>
-			<br>
-			
-			<P>DNI</P>
-			<input type="text" name="DNI_pte" placeholder="DNI" required>
-			<br>
-	
-			<P>OBRA SOCIAL</P>
-			<input type="text" name="OS_pte" placeholder="OS" required>
-			<br>
+    <form action="procesar_formulario.php" method="post">
+        <label for="apellido">Apellido </label>
+        <input type="text" id="Apellido_pte" name="Apellido_pte" required>
+        
+        <label for="nombre">Nombre</label>
+        <input type="text" id="Nombre_pte" name="nombre" required>
 
-			<P>TELEFONO</P>
-			<input type="text" name="Tel_pte" placeholder="TELEFONO" required>
-			<br>
+        <label for="dni">DNI</label>
+        <input type="text" name="DNI" id="DNI_pte" maxlength="10" pattern="[0-9A]*" required>
 
-			<P>CARDIOPATA</P>
-			<input type="btn" name="Cardiopata" placeholder="CARDIOPATA" required>
-			<br>
-			<br>
-			<br>
+        <label for="OS">Obra Social</label>
+        <input type="text" name="OS_pte" id="OS_pte" required>
 
-			 <input type="submit" class ="btn" name="Solicitar turno" value = "Solicitar turno">
-		</form>
-	 </div>
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" required>
+
+        <label for="Fecha_nac">Fecha de Nacimiento</label>
+        <input type="date" name="Fecha_nac" id="Fecha_nac" required>
+
+        <label for="Cardiopata">Cardiopata</label>
+        <select id="Cardiopata" name="Cardiopata">
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+        </select>
+        <br>
+
+        <label for="opciones">Profesionales disponibles</label>
+        <select id="opciones" name="opciones">
+        </select>
+        <br>
+        <br>
+
+        <button type="submit">Confirmar turno</button>
+    </form>
+
 </body>
 </html>
