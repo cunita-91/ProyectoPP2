@@ -1,0 +1,11 @@
+INSERT INTO turnoscardio.profesionales(ID_prof,Apellido_prof,Nombre_prof,Profesion,Dia_atencion)
+VALUES (NULL,"Zayat","Andrea","Cardiologa","Miércoles"),
+       (NULL,"Martinez","Bettina","Cardiologa","Lunes"),
+       (NULL, "Vargas", "Karina","Cardiologa","Lunes y Martes"),
+       (NULL, "Turbay","Rocio","Cardiologa","Martes"),
+       (NULL, "Ovando","Cecilia","Cardiologa","Miércoles"),
+       (NULL, "Altamirano", "Maria Jose", "Cardiologa","Jueves"),
+       (NULL, "Quin Alonso", "Maria", "Cardiologa", "Jueves y Viernes"),
+       (NULL, "Zerpa", "Natalia", "Cardiologa", "Jueves"),
+       (NULL, "Salvi", "Esteban", "Electrofisiologo", "Viernes"),
+       (NULL, "Terreni", "Lucas", "Cardiologo", "Lunes y Miércoles");
