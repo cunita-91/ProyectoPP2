@@ -1,0 +1,1 @@
+RENAME TABLE nombre_de_la_tabla TO Horario;
