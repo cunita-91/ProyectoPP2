@@ -2,7 +2,7 @@
     $servidor= "localhost";
     $usuario= "root";
     $clave= "";
-    $BaseDeDatos="Turnero";
+    $BaseDeDatos="turnoscardio";
 
     $enlace = mysqli_connect($servidor, $usuario, $clave, $BaseDeDatos); 
 
@@ -70,7 +70,6 @@
 		$OS_pte=$_POST["OS_pte"];
         $Fecha_Nac =$_POST["Fecha_Nac"];
 		$Tel_pte= $_POST["Tel_pte"];
-
 		$Cardiopata=$_POST["Cardiopata"];
 	}
 
