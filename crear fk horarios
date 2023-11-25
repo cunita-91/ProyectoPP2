@@ -1,0 +1,3 @@
+ALTER TABLE turnoscardio.turnos_asig 
+ADD CONSTRAINT cF2 FOREIGN KEY (Hora_turno)
+REFERENCES Horarios (HoraDisp);
