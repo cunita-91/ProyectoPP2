@@ -1,11 +1,11 @@
 <?php
     $server = "localhost";
     $user = "root";
-    $pass = " ";
+    $pass = "";
     $db = "turnoscardio";
 
     $conexion = new mysqli ($server, $user, $pass, $db);
-    if ($conexion->connect_errno) {
+    if ($conexion->connect_error) {
         die("conexion ha fallado". $conexion->connect_errno);
     }
      
