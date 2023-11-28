@@ -60,6 +60,7 @@
                  <br>
      
                   <input type="submit" class ="btn" name="Solicitar turno" value = "Solicitar turno">
+                  <input type="reset">
              </form>
           </div>
      
@@ -68,24 +69,33 @@
      </html>
      
      <?php
-         if(isset($_POST['Solicitar turno'])){
-             $Apellido= $_POST["Apellido_pte"];
-             $Nombre= $_POST["Nombre_pte"];
-             $DNI=$_POST["DNI_pte"];
-             $OS=$_POST["OS_pte"];
-             $Tel= $_POST["Tel_pte"];
-             $Fecha_Nac = $_POST["Fecha_Nac"];
-             $Cardiopata=$_POST["Cardiopata"];
-         }
-     
-         $InsertarDatos = "INSERT INTO Pacientes 
-         VALUES (' ','$Apellido','$Nombre','$DNI','$OS','$Tel','$Fecha_Nac', '$Cardiopata)";
-     
-         $ejecutarInsertar = mysqli_query($conexion, $InsertarDatos);
-     
-         if(!$ejecutarInsertar){
-             echo "Error al insertar datos";
-         }
-     ?>
+$Apellido = $Nombre = $DNI = $OS = $Tel = $Fecha_Nac = $Cardiopata = "";
+
+if(isset($_POST['Solicitar turno'])){
+    $Apellido = $_POST["Apellido_pte"];
+    $Nombre = $_POST["Nombre_pte"];
+    $DNI = $_POST["DNI_pte"];
+    $OS = $_POST["OS_pte"];
+    $Tel = $_POST["Tel_pte"];
+    $Fecha_Nac = $_POST["Fecha_Nac"];
+    $Cardiopata = $_POST["Cardiopata"];
+}
+
+if(!empty($Apellido) && !empty($Nombre) && !empty($DNI) && !empty($OS) && !empty($Tel) && !empty($Fecha_Nac) && isset($Cardiopata)) {
+  
+    $conexion = mysqli_connect("localhost", "root", "", "turnoscardio");
+
+    if(!$conexion){
+        die("Error al conectar a la base de datos: " . mysqli_connect_error());
+    }
+
+    $InsertarDatos = "INSERT INTO pacientes 
+                      VALUES ('$Apellido','$Nombre','$DNI','$OS','$Tel','$Fecha_Nac','$Cardiopata')";
+
+    $ejecutarInsertar = mysqli_query($conexion, $InsertarDatos);
+
+} 
+?>
+
 
 
