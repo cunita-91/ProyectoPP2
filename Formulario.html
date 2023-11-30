@@ -1,72 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Formulario turnos</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>Formulario turnos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="wrapper">
-    <div class="title">Registro pacientes</div>
-    <form action="#">
-      <div class="user-details">
-        
-        <div class="input-box">
-          <span class="details">Nombre</span>
-          <input type="text" name="Nombre_pte" placeholder="Nombre" required>
-        </div>
-     
-        <div class="input-box">
-          <span class="details">Apellido</span>
-          <input type="text" name="Apellido_pte" placeholder="Apellido" required>
-        </div>
+    <div class="wrapper">
+        <div class="title">Registro pacientes</div>
+        <form action="conexion.php" method="post">
+            <div class="user-details">
+                <div class="input-box">
+                    <span class="details">Apellido</span>
+                    <input type="text" name="Apellido_pte" placeholder="Apellido" required>
+                </div>
+             
+                <div class="input-box">
+                    <span class="details">Nombre</span>
+                    <input type="text" name="Nombre_pte" placeholder="Nombre" required>
+                </div>
 
-       <div class="input-box">
-        <span class="details">DNI</span>
-        <input type="text" name="DNI_pte" placeholder="DNI" required>
-      </div>
+                <div class="input-box">
+                    <span class="details">DNI</span>
+                    <input type="text" name="DNI_pte" placeholder="DNI" required>
+                </div>
 
-      <div class="input-box">
-        <span class="details">Telefono</span>
-        <input type="number" name="Tel_pte" placeholder="Telefono" required>
-      </div>
+                <div class="input-box">
+                    <span class="details">Obra social</span>
+                    <input type="text" name= "OS_pte" placeholder="Obra social" required>
+                </div>
 
-      <div class="input-box">
-        <span class="details">Fecha de Nacimiento</span>
-        <input type="text" name= "Fecha_Nac" placeholder="Fecha de nacimiento" required>
-      </div>
+                <div class="input-box">
+                    <span class="details">Telefono</span>
+                    <input type="number" name="Tel_pte" placeholder="Telefono" required>
+                </div>
 
-      <div class="input-box">
-        <span class="details">Obra social</span>
-        <input type="text" name= "OS_pte" placeholder="Obra social" required>
-      </div>
-      </div>
+                <div class="input-box">
+                    <span class="details">Fecha de Nacimiento</span>
+                    <input type="date" name= "Fecha_Nac" placeholder="Fecha de nacimiento" required>
+                </div>
+            </div>
 
-        <div class="gender-details">
-        <input type="radio" name="gender" id="dot-1">
-        <input type="radio" name="gender" id="dot-2">
-        
+            <div class="gender-details">
+                <span class="details">Cardiopata</span>
+                <input type="radio" name="Cardiopata" id="dot-1" value="SI">
+                <input type="radio" name="Cardiopata" id="dot-2" value="NO">
+            </div>
 
-        <span class="gender-title">Cardiopata</span>
-        <div class="category">
-          <label for="dot-1">
-            <span class="dot one"></span>
-            <span class="gender">SI</span>
-          </label>
-
-          <label for="dot-2">
-            <span class="dot two"></span>
-            <span class="gender">NO</span>
-          </label>
-
-          
-        </div>
-      </div>
-
-      <div class="button">
-        <input type="submit" value="Confirmar">
-      </div>
-    </form>
-  </div>
-  </body>
+            <div class="button">
+                <input type="submit" name="Confirmar" value="Confirmar">
+            </div>
+        </form>
+    </div>
+</body>
 </html>
